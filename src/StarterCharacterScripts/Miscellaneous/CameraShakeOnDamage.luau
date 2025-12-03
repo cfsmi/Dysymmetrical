@@ -9,6 +9,9 @@ return {
     Init = function(_self)
         local Player = Players.LocalPlayer
         local Character = Player.Character
+        if not character.ScreenShakeOnHit.Value then
+            return
+        end
         if Utils.Instance.FindFirstChild(Character, "Role").Value == "Killer" then
             return
         end

@@ -305,7 +305,10 @@ function PlayerManager:_RespawnPlayer(plr: Player, RigName: string?, RigType: ("
 	Role.Name = "Role"
 	Role.Value = RigType
 	Role.Parent = char
-	
+	--I dont know if there is a better way to do this but oh well
+	local ScreenShakeOnHit = Instance.new("BoolValue")
+	ScreenShakeOnHit.Name = "ScreenShakeOnHit"
+	ScreenShakeOnHit.Value = true
 	plr.Character = char
 	
 	--clones all scripts
